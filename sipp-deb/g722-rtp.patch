@@ -1,0 +1,17 @@
+diff --git a/src/actions.cpp b/src/actions.cpp
+index 77cc295..1e7957a 100644
+--- a/src/actions.cpp
++++ b/src/actions.cpp
+@@ -535,6 +535,11 @@ void CAction::setRTPStreamActInfo(const char* P_value)
+              M_rtpstream_actinfo.ticks_per_packet= 160;
+              break;
+ 
++    case 9:  M_rtpstream_actinfo.ms_per_packet= 20;
++             M_rtpstream_actinfo.bytes_per_packet= 160;
++             M_rtpstream_actinfo.ticks_per_packet= 160;
++             break;
++
+     case 18: M_rtpstream_actinfo.ms_per_packet= 20;
+              M_rtpstream_actinfo.bytes_per_packet= 20;
+              M_rtpstream_actinfo.ticks_per_packet= 160;
+
