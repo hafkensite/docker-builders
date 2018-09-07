@@ -16,6 +16,8 @@ shell: image
 run: image
 	docker run \
 	  --rm \
+	  --tty \
+	  --interactive \
 	  --volume $(current_dir):/project \
 	  $(PROJECT) $(ARGS)	
 

@@ -48,3 +48,5 @@ ENV BCG729_DEB_VER=$BCG729_VER-0osso1+deb9
 RUN dpkg -i /libbcg729-dev_${BCG729_DEB_VER}_amd64.deb /libbcg729-0_${BCG729_DEB_VER}_amd64.deb
 WORKDIR /asterisk-g72x
 RUN dpkg-buildpackage -us -uc -sa 
+ADD copy-artifacts.sh /copy-artifacts.sh
+CMD /copy-artifacts.sh
